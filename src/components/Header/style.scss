@@ -1,0 +1,12 @@
+@import '/src/sass/colors';
+
+.Header-Component {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .MuiBadge-badge {
+        top: 3vw;
+        right: 1vw;
+    }
+}

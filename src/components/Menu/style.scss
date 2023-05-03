@@ -1,0 +1,49 @@
+@import '/src/sass/colors';
+
+.Menu-Component {
+    width: 80vw;
+    
+    .profile {
+        background-color: $primary-color;
+        padding: 10vw 5vw;
+        gap: 5vw;
+
+        .info {
+            flex-direction: column;
+            justify-content: space-between;
+            color: white;
+
+            .name {
+                font-size: 4vw;
+            }
+
+            .email {
+                font-size: 3vw;
+            }
+
+            .link {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .links {
+        flex-direction: column;
+        padding: 3vw 10vw;
+        gap: 7vw;
+
+        .Link-Component {
+            flex-direction: column;
+
+            .name {
+                font-size: 4vw;
+            }
+
+            .sublinks {
+                flex-direction: column;
+                padding: 2vw 5vw;
+                gap: 2vw;
+            }
+        }
+    }
+}

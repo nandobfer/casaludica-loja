@@ -1,0 +1,47 @@
+@import '/src/sass/colors';
+
+.Product-Page {
+    width: 100%;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 0 5vw;
+
+    .navigation {
+        gap: 2vw;
+        color: white;
+
+        .link {
+            cursor: pointer;
+        }
+    }
+
+    .title {
+        padding: 3vw 5vw;
+    }
+
+    .description {
+        color: $primary-color;
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .numbers {
+        .quantity-container {
+            align-items: center;
+            width: 50vw;
+            justify-content: space-between;
+
+            .quantity {
+                color: $primary-color;
+                font-weight: bold;
+                font-size: 5vw;
+                justify-content: center;
+                align-items: center;
+                padding: 2vw 3vw;
+                background-color: $background-secondary-color;
+                border: 1px solid $primary-color;
+                border-radius: 1vw;
+            }
+        }
+    }
+}
