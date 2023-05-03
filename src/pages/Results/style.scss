@@ -1,0 +1,14 @@
+@import '/src/sass/colors';
+
+.Results-Page {
+    width: 100%;
+    flex-direction: column;
+    gap: 5vw;
+    padding: 0 5vw;
+
+    .skeletons-container {
+        flex-direction: column;
+        gap: 3vw;
+        align-items: center;
+    }
+}

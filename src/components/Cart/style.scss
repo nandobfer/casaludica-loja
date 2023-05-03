@@ -1,0 +1,50 @@
+@import '/src/sass/colors';
+
+.Cart-Component {
+    width: 80vw;
+
+    .info {
+        background-color: $primary-color;
+        padding: 10vw;
+        justify-content: space-between;
+        align-items: center;
+
+        .text {
+            flex-direction: column;
+            color: white;
+
+            h3 {
+                font-size: 4vw;
+            }
+
+            .total {
+                font-size: 3vw;
+            }
+        }
+
+        .amount-circle {
+            border-radius: 100%;
+            background-color: $background-secondary-color;
+            width: 10vw;
+            height: 10vw;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .product-list {
+        flex-direction: column;
+        gap: 5vw;
+        overflow-y: auto;
+        height: 80vh;
+        padding: 5vw;
+    }
+
+    .button-container {
+        width: 100%;
+        padding: 5vw 3vw;
+        border-top-right-radius: 10vw;
+        border-top-left-radius: 10vw;
+        box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+}
