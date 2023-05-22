@@ -6,4 +6,19 @@
     padding: 0 5vw;
     gap: 5vw;
 
+    .Finish {
+        font-weight: bold;
+        font-size: 20px;
+        color: #363775;
+    }    
+    .Order{
+        width: 100%;
+        box-shadow: 0 0 8px rgba(0,0,0,0.4);
+        padding: 5vw;
+        border-radius: 4.5vw;
+        flex-direction: column;
+        height: fit-content;
+        gap: 3vw;
+    }
+
 }
