@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Product as ProductType } from "../../definitions/products"
+import { useCart } from "../../hooks/useCart"
 import { ReactComponent as CloseIcon } from "../../images/x.svg"
 
 interface ProductProps {
@@ -7,7 +8,13 @@ interface ProductProps {
 }
 
 export const Product: React.FC<ProductProps> = ({ product }) => {
+    const cart = useCart()
+
     const [productQuantity, setProductQuantity] = useState(product.quantity)
+
+    const deleteProduct = () => {
+        cart.remove(product)
+    }
     return (
         <div className="product-container">
             <img src={product.cover} alt="product" className="img-product" />
@@ -28,7 +35,7 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
                     Preço: <span className="price">R${product.price}</span>
                 </p>
             </div>
-            <CloseIcon className="close" />
+            <CloseIcon className="close" onClick={deleteProduct} />
         </div>
     )
 }
