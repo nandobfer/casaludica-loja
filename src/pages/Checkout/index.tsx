@@ -16,8 +16,8 @@ export const Checkout: React.FC<CheckoutProps> = ({}) => {
             <SearchField />
             <Collections />
 
-            <p className="Finish">Finalizar Pedido</p>
-            <div className="Order">
+            <p className="finish">Finalizar Pedido</p>
+            <div className="order">
                 <p>Produto 1</p>
             </div>
         </div>
