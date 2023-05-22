@@ -1,3 +1,4 @@
+import { IconButton } from "@mui/material"
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { Product as ProductType } from "../../definitions/products"
@@ -42,7 +43,9 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
                     Preço: <span className="price">R${product.price}</span>
                 </p>
             </div>
-            <CloseIcon className="close" onClick={deleteProduct} />
+            <IconButton className="close" onClick={deleteProduct}>
+                <CloseIcon style={{ height: "auto", width: "6vw" }} />
+            </IconButton>
         </div>
     )
 }
