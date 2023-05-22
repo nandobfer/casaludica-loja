@@ -15,6 +15,7 @@ import { ReactComponent as ArrowIcon } from "../../images/arrow.svg"
 import { useColors } from "../../hooks/useColors"
 import Button from "@mui/material/Button"
 import { useCart } from "../../hooks/useCart"
+import { Footer } from "../../components/Footer"
 
 interface ProductProps {}
 
@@ -144,6 +145,7 @@ export const Product: React.FC<ProductProps> = ({}) => {
                     </Button>
                 </>
             )}
+            <Footer />
         </div>
     )
 }
