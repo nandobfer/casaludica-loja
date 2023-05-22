@@ -34,7 +34,7 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
                     <input
                         type="number"
                         className="number"
-                        value={product.quantity}
+                        value={productQuantity}
                         onChange={(event) => setProductQuantity(Number(event.target.value))}
                     />
                 </p>
