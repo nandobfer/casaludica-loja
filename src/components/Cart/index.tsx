@@ -41,8 +41,14 @@ export const Cart: React.FC<CartProps> = ({ isOpen, setOpen }) => {
                     <Product key={product.id} product={product} />
                 ))}
             </div>
-            <div className="button-container" onClick={() => finishOrder()}>
-                <button style={{ width: "100%" }}>Finalizar compra</button>
+            <div className="button-container">
+                <button
+                    style={{ width: "100%", backgroundColor: cart.products.length == 0 ? "#555555" : "" }}
+                    onClick={() => finishOrder()}
+                    disabled={cart.products.length == 0}
+                >
+                    Finalizar compra
+                </button>
             </div>
         </Drawer>
     )
