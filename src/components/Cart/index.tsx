@@ -20,6 +20,10 @@ export const Cart: React.FC<CartProps> = ({ isOpen, setOpen }) => {
         setOpen(false)
     }
 
+    const finishOrder = () => {
+        navigate("/checkout")
+        closeMenu()
+    }
     return (
         <Drawer anchor={"right"} open={isOpen} onClose={closeMenu} PaperProps={{ className: "Cart-Component" }}>
             <div className="info">
@@ -37,7 +41,7 @@ export const Cart: React.FC<CartProps> = ({ isOpen, setOpen }) => {
                     <Product key={product.id} product={product} />
                 ))}
             </div>
-            <div className="button-container" onClick={() => navigate("/checkout")}>
+            <div className="button-container" onClick={() => finishOrder()}>
                 <button style={{ width: "100%" }}>Finalizar compra</button>
             </div>
         </Drawer>
