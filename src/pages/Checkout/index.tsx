@@ -3,6 +3,7 @@ import { Background } from "../../components/Background"
 import { Header } from "../../components/Header"
 import { SearchField } from "../../components/SearchField"
 import { Collections } from "../Home/Collections"
+import { Product } from "./Product"
 import "./style.scss"
 
 interface CheckoutProps {}
@@ -18,7 +19,7 @@ export const Checkout: React.FC<CheckoutProps> = ({}) => {
 
             <p className="finish">Finalizar Pedido</p>
             <div className="order">
-                <p>Produto 1</p>
+                <Product />
             </div>
         </div>
     )
