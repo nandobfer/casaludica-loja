@@ -6,6 +6,7 @@ import { useCart } from '../../hooks/useCart';
 import { CurrencyText } from '../CurrencyText';
 import { Product } from './Product';
 import { useNavigate } from "react-router-dom"
+import { ButtonComponent } from "../ButtonComponent"
 
 interface CartProps {
     isOpen: boolean
@@ -42,13 +43,14 @@ export const Cart: React.FC<CartProps> = ({ isOpen, setOpen }) => {
                 ))}
             </div>
             <div className="button-container">
-                <button
-                    style={{ width: "100%", backgroundColor: cart.products.length == 0 ? "#555555" : "" }}
+                <ButtonComponent
+                    style={{ width: "100%" }}
+                    title="Finalizar compra"
                     onClick={() => finishOrder()}
                     disabled={cart.products.length == 0}
                 >
                     Finalizar compra
-                </button>
+                </ButtonComponent>
             </div>
         </Drawer>
     )

@@ -6,6 +6,7 @@ import { useColors } from '../../../../hooks/useColors';
 import { CurrencyText } from '../../../../components/CurrencyText';
 import { useCart } from '../../../../hooks/useCart';
 import { useNavigate } from "react-router-dom"
+import { ButtonComponent } from "../../../../components/ButtonComponent"
 
 interface ProductProps {
     product: ProductType
@@ -28,14 +29,7 @@ export const Product: React.FC<ProductProps> = ({ product }) => {
             <h2>{product.name}</h2>
             <p>{product.resume}</p>
             <CurrencyText value={product.price} color={"#686868"} style={{ fontWeight: "bold" }} />
-            <Button
-                onClick={() => cart.add(product)}
-                variant="contained"
-                fullWidth
-                sx={{ backgroundColor: colors.green, borderRadius: "10vw", fontWeight: "bold" }}
-            >
-                Quero esse
-            </Button>
+            <ButtonComponent onClick={() => cart.add(product)}>Quero esse</ButtonComponent>
         </div>
     )
 }

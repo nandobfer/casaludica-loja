@@ -16,6 +16,7 @@ import { useColors } from "../../hooks/useColors"
 import Button from "@mui/material/Button"
 import { useCart } from "../../hooks/useCart"
 import { Footer } from "../../components/Footer"
+import { ButtonComponent } from "../../components/ButtonComponent"
 
 interface ProductProps {}
 
@@ -139,12 +140,20 @@ export const Product: React.FC<ProductProps> = ({}) => {
                             }}
                         />
                     </div>
-
-                    <Button variant="contained" onClick={() => cart.add({ ...product, quantity })}>
+                    <ButtonComponent onClick={() => cart.add({ ...product, quantity })}>
                         Adicionar ao carrinho
-                    </Button>
+                    </ButtonComponent>
+                    <h2 style={{ color: colors.primary }}>Detalhes</h2>
+                    <ul style={{ padding: "0 4vw", color: colors.primary }}>
+                        <li>Lorem Ipsum</li>
+                        <li>Daenys</li>
+                    </ul>
+
+                    <div></div>
+                    <div></div>
                 </>
             )}
+
             <Footer />
         </div>
     )

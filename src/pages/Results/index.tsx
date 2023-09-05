@@ -10,6 +10,7 @@ import { useApi } from "../../hooks/useApi"
 import { useCart } from "../../hooks/useCart"
 import { Collections } from "../Home/Collections"
 import "./style.scss"
+import { ButtonComponent } from "../../components/ButtonComponent"
 
 interface ResultsProps {}
 
@@ -55,11 +56,11 @@ export const Results: React.FC<ResultsProps> = ({}) => {
                         setProducts(response.data)
                     },
                 })
-            } else if (type == 'category') {
+            } else if (type == "category") {
                 api.products.category(value, {
                     callback: (response: { data: Product[] }) => {
                         setProducts(response.data)
-                    }
+                    },
                 })
             }
         } else {
@@ -106,7 +107,7 @@ export const Results: React.FC<ResultsProps> = ({}) => {
             ) : (
                 products.map((product: Product) => (
                     <div
-                        style={{ flexDirection: "column", alignItems: "center" }}
+                        style={{ flexDirection: "column", alignItems: "center", gap: "1vw" }}
                         key={product.id}
                         onClick={() => navigate(`/product/${product.id}`)}
                     >
@@ -114,9 +115,15 @@ export const Results: React.FC<ResultsProps> = ({}) => {
                         <Avatar src={product.cover} sx={{ width: "50vw", height: "auto" }} />
                         <h3>{product.resume}</h3>
                         <p>{product.description}</p>
-                        <Button variant="contained" onClick={() => cart.add(product)}>
+                        {/* <Button variant="contained" onClick={() => cart.add(product)}>
                             Eu quero
-                        </Button>
+                        </Button> */}
+                        <ButtonComponent
+                            onClick={() => cart.add(product)}
+                            style={{ width: "40%", fontSize: "4vw", padding: "2vw 4vw" }}
+                        >
+                            EU QUERO
+                        </ButtonComponent>
                     </div>
                 ))
             )}
